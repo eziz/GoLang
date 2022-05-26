@@ -173,12 +173,12 @@ func main() {
 
 			superhero :=
 				map[string]map[string]string{
-					"Superman": map[string]string{
+					"Superman": {
 						"Realname": "Clark Kent",
 						"City":     "Mertopolis",
 					},
 
-					"Batman": map[string]string{
+					"Batman": {
 						"Realname": "Bruce Wayne",
 						"City":     "Gotham City",
 					},
