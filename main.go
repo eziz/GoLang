@@ -45,6 +45,7 @@ func main() {
 
 	// var then variable name then variable type
 	var first string
+	// choose one of them
 	fmt.Scanln(&first)
 	x, error := strconv.Atoi(first)
 	fmt.Println(error)
