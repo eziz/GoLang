@@ -41,16 +41,17 @@ func main() {
 	fmt.Println("14. File Input and Output : ")
 	fmt.Println("15. Webserver : ")
 	fmt.Println("16. GoLang, MySql tutorial: ")
+
 	fmt.Print("Please choose one of them: ")
 
 	// var then variable name then variable type
-	var first string
+	var first int
 	// choose one of them
 	fmt.Scanln(&first)
-	x, error := strconv.Atoi(first)
-	fmt.Println(error)
+	//x, error := strconv.Atoi(first)
+	//fmt.Println(error)
 
-	switch x {
+	switch first {
 	case 1:
 		fmt.Println(" 1. Hello World ")
 		// get string length
@@ -297,7 +298,6 @@ func factorial(num int) int {
 	if num == 0 {
 		return 1
 	}
-
 	return num * factorial(num-1)
 }
 
@@ -326,7 +326,6 @@ func demPanic() {
 }
 
 func addemup(args ...int) int {
-
 	sum := 0
 	for _, value := range args {
 		sum += value
@@ -343,7 +342,6 @@ type Rectangle struct {
 
 // We calculate rectangle area by using rectangle structure
 func (rect Rectangle) area() float64 {
-
 	return rect.height * rect.width
 }
 
