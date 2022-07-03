@@ -270,6 +270,8 @@ func main() {
 		defer db.Close()
 		fmt.Println(" Successfully Connected to MySql database")
 
+	case 17:
+		fmt.Println("17. ")
 	default:
 		fmt.Println("you didnt choose anything")
 	}
