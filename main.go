@@ -25,15 +25,15 @@ func main() {
 	x, y := 5, 6
 
 	// Menu
-	fmt.Println("1. Hello World : ")
-	fmt.Println("2. Arithmetic Operators: ")
-	fmt.Println("3. Logical Operators:  ")
-	fmt.Println("4. Printf:  ")
-	fmt.Println("5. Pointers: ")
-	fmt.Println("6. Loops: ")
-	fmt.Println("7. Desicion Making: ")
-	fmt.Println("8. Arrays: ")
-	fmt.Println("9. Maps: ")
+	fmt.Println("1.  Hello World : ")
+	fmt.Println("2.  Arithmetic Operators: ")
+	fmt.Println("3.  Logical Operators:  ")
+	fmt.Println("4.  Printf:  ")
+	fmt.Println("5.  Pointers: ")
+	fmt.Println("6.  Loops: ")
+	fmt.Println("7.  Desicion Making: ")
+	fmt.Println("8.  Arrays: ")
+	fmt.Println("9.  Maps: ")
 	fmt.Println("10. Functions : ")
 	fmt.Println("11. Recursion : ")
 	fmt.Println("12. Defer,Recover, Panic : ")
@@ -41,16 +41,17 @@ func main() {
 	fmt.Println("14. File Input and Output : ")
 	fmt.Println("15. Webserver : ")
 	fmt.Println("16. GoLang, MySql tutorial: ")
+
 	fmt.Print("Please choose one of them: ")
 
 	// var then variable name then variable type
-	var first string
+	var first int
 	// choose one of them
 	fmt.Scanln(&first)
-	x, error := strconv.Atoi(first)
-	fmt.Println(error)
+	//x, error := strconv.Atoi(first)
+	//fmt.Println(error)
 
-	switch x {
+	switch first {
 	case 1:
 		fmt.Println(" 1. Hello World ")
 		// get string length
@@ -73,6 +74,7 @@ func main() {
 		fmt.Println("x mod y= ", x%y)
 	case 3:
 		fmt.Println("3. Logical Operators: ")
+
 		fmt.Println("&& -and example", isbool && hate)
 		fmt.Println("|| -or example", isbool || hate)
 		fmt.Println("! negation example ", !isbool, !hate)
@@ -80,10 +82,8 @@ func main() {
 		fmt.Println("4. Printf:")
 
 		fmt.Printf(" %T \n", isbool)
-
 		fmt.Println("String length=", len(Name))
 		fmt.Println(Name + "is a GoLang developer")
-
 		fmt.Printf(" %.3f \n", pi)
 		fmt.Printf(" %T \n", Name)
 		fmt.Printf(" %t \n", win)
@@ -94,12 +94,14 @@ func main() {
 	case 5:
 		//Pointer example function
 		fmt.Println("5. Pointers:")
+
 		changeValue(x)
 		fmt.Println("Without pointer", x)
 		changeValueP(&x)
 		fmt.Println("With Pointer", x)
 	case 6:
 		fmt.Println("6.Loops:")
+
 		for i := 1; i < x; i++ {
 			for j := 1; j < i; j++ {
 				fmt.Printf("*_*")
@@ -108,6 +110,7 @@ func main() {
 		}
 	case 7:
 		fmt.Println("7. Decision Making:")
+
 		fmt.Print("please enter your age: ")
 		var age string
 		fmt.Scanln(&age)
@@ -122,6 +125,7 @@ func main() {
 
 	case 8:
 		fmt.Println("8. Arrays ")
+
 		fmt.Print("please enter quantity of students: ")
 		var quantity string
 		var sany int
@@ -133,21 +137,18 @@ func main() {
 		for n := 0; n < sany; n++ {
 			Students[n] = n + 1
 			fmt.Println(Students[n])
-
 		}
 
 		EvenNum := [5]int{0, 2, 4, 6, 8}
 		for i, value := range EvenNum {
 			fmt.Println(value, i)
 		}
-
 		numSlice := []int{5, 4, 3, 2, 1}
 		sliced := numSlice[0:]
 		fmt.Println(sliced)
 		slice2 := make([]int, 5, 10)
 		copy(slice2, numSlice)
 		fmt.Println(numSlice)
-
 		slice3 := append(numSlice, 3, 0, -1)
 		fmt.Println(slice3)
 
@@ -270,6 +271,8 @@ func main() {
 		defer db.Close()
 		fmt.Println(" Successfully Connected to MySql database")
 
+	case 17:
+		fmt.Println("17. ")
 	default:
 		fmt.Println("you didnt choose anything")
 	}
@@ -295,7 +298,6 @@ func factorial(num int) int {
 	if num == 0 {
 		return 1
 	}
-
 	return num * factorial(num-1)
 }
 
@@ -324,7 +326,6 @@ func demPanic() {
 }
 
 func addemup(args ...int) int {
-
 	sum := 0
 	for _, value := range args {
 		sum += value
@@ -341,7 +342,6 @@ type Rectangle struct {
 
 // We calculate rectangle area by using rectangle structure
 func (rect Rectangle) area() float64 {
-
 	return rect.height * rect.width
 }
 

@@ -1,0 +1,1 @@
+Hi, My name iz Eziz and this file crated using GoLang
